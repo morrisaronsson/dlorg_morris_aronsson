@@ -1,1 +1,14 @@
 #!/usr/bin/env bash
+
+for file in ~/Downloads/*.txt; do
+    if [[ -f "$file" ]]; then
+        echo "TXT file found: $(basename "$file")"
+    fi
+done
+
+for file in ~/Downloads/*.png; do
+    if [[ -f "$file" ]]; then
+        echo "TXT file found: $(basename "$file")"
+    fi
+done
+     
