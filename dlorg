@@ -2,13 +2,26 @@
 
 for file in ~/Downloads/*.txt; do
     if [[ -f "$file" ]]; then
-        echo "TXT file found: $(basename "$file")"
-    fi
+        mv $file /home/linton/Downloads/text
+    fi  
 done
 
-for file in ~/Downloads/*.png; do
+
+
+for file in ~/Downloads/*.pdf; do
     if [[ -f "$file" ]]; then
-        echo "TXT file found: $(basename "$file")"
+        mv $file /home/linton/Downloads/pdfs
     fi
 done
      
+
+for file in ~/Downloads/*.docx; do
+    if [[ -f "$file" ]]; then
+        mv $file /home/linton/Downloads/docs
+    fi  
+done
+
+
+
+     
+
