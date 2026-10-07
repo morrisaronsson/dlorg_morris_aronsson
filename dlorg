@@ -13,6 +13,7 @@ do
 
 for file in ~/Downloads/*.txt; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/text
         mv $file ~/Downloads/text
     fi
 done
@@ -20,6 +21,7 @@ done
 
 for file in ~/Downloads/*.pdf; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/pdfs
         mv $file ~/Downloads/pdfs
     fi
 done 
@@ -27,6 +29,7 @@ done
 
 for file in ~/Downloads/*.docx; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/docs
         mv $file ~/Downloads/docs
     fi  
 done
@@ -34,6 +37,7 @@ done
 
 for file in ~/Downloads/*.png; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/images
         mv $file ~/Downloads/images
     fi  
 done
@@ -41,6 +45,7 @@ done
 
 for file in ~/Downloads/*.jpg; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/images
         mv $file ~/Downloads/images
     fi  
 done
@@ -48,6 +53,7 @@ done
 
 for file in ~/Downloads/*.zip; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/zip
         mv $file ~/Downloads/zip
     fi  
 done
@@ -55,6 +61,7 @@ done
 
 for file in ~/Downloads/*.xlsx; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/excel
         mv $file ~/Downloads/excel
     fi  
 done
@@ -62,6 +69,7 @@ done
 
 for file in ~/Downloads/*; do
     if [[ -f "$file" ]]; then
+        mkdir -p ~/Downloads/other
         mv $file ~/Downloads/other
     fi  
 done

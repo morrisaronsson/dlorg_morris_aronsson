@@ -39,4 +39,10 @@ This part was easy, I just added the -p then specified where I wanted the folder
 With this the base assignment is completed and I feel happy with how I´ve done this. Im sure it could be done much simpler, but this makes sense in my head right now. 
 Now I will move on to the bonus tasks. 
 
+2a) Tried this several times, using tmux with three screens, one with the script open in vim as I worked on it, one in my dlorg directory and one in my Downloads directory.
+2b) I did this and it worked perfectly. 
+2c) Also works perfectly, all the files are moved where they should be. 
+2d) BONUS This turned out to be alot simpler than I had feared. I had been thinking on it for a while, wondering if I should use something like if or else to have it create a directory if there is no place for it to go. 
+In the end I realized I already have the if built in, I can just add another line, so that every time a file is created of moved into Downloads the script first tries to create the correct directory, and doesnt do that with -p if there already is one. Then it moves the file there. Very simple, but I tried it and it works perfectly. 
 
+2e) BONUS
