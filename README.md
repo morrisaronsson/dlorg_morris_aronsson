@@ -28,3 +28,8 @@ I made one for txt and one for png.
 It worked! The script found the files I had created and printed their names.
 Now I need a function where it will move the files into folders depending on their types.
 
+I added the function, writing for files in downloads that have specific suffixes then do move it to the specific folder I designate. Then I created the folders. I repeated this for every type in the lab, I will add more later, and for the others file I just left it empty so that any document without the specific types I´ve specified will be put in that directory. 
+
+next I added the inotifywait function, using -m to monitor, -e to event either files moved to the folder or files created in the folder. Then I formated it to monitor ~/Downloads, using ~ will make it so it works on other users as well, and not only mine. If I had written /linton/Downloads/ that would not help the people hiring me to write this script. Now it will work on any individual users computer. 
+Then I piped it | and added while read file do, so that when it reads a file, it does my script, which is to put it into the corresponding folder. I struggled with this for a while, until I realized I needed another done at the end. 
+Now this works. I tested it, and anytime a file is created or moved into Downloads it is reshuffled. 
