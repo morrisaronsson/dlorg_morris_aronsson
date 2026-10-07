@@ -26,10 +26,17 @@ I made one for txt and one for png.
 -
 
 It worked! The script found the files I had created and printed their names.
+I used LLM to find the basename function, so that it only showed me the name of the file and not the whole path which was nice, even if it is only for making it easier for me to read. 
 Now I need a function where it will move the files into folders depending on their types.
 
 I added the function, writing for files in downloads that have specific suffixes then do move it to the specific folder I designate. Then I created the folders. I repeated this for every type in the lab, I will add more later, and for the others file I just left it empty so that any document without the specific types I´ve specified will be put in that directory. 
 
 next I added the inotifywait function, using -m to monitor, -e to event either files moved to the folder or files created in the folder. Then I formated it to monitor ~/Downloads, using ~ will make it so it works on other users as well, and not only mine. If I had written /linton/Downloads/ that would not help the people hiring me to write this script. Now it will work on any individual users computer. 
-Then I piped it | and added while read file do, so that when it reads a file, it does my script, which is to put it into the corresponding folder. I struggled with this for a while, until I realized I needed another done at the end. 
-Now this works. I tested it, and anytime a file is created or moved into Downloads it is reshuffled. 
+Then I piped it | and added while read file do, so that when it reads a file, it does my script, which is to put it into the corresponding folder. I struggled with this for a while, until I asked LLM how my inotifywait line should be structured and it showed me done at the end. So I realized I needed two done at the end. A small mistake but I was staring at it for a while and this helped me get forwards. 
+Now this works. I tested it, and anytime a file is created or moved into Downloads it is reshuffled.
+Now I want to have the script create each of the directories and use -p so that they are only created if they don´t already exist. This in theory should recreate all the folders incase one of them is deleted by the user.  
+This part was easy, I just added the -p then specified where I wanted the folder to be created and what name it should have. I also added two new directories for additional file types, one for zip and one for excel. Other files like mp4 and wav will still go into other. 
+With this the base assignment is completed and I feel happy with how I´ve done this. Im sure it could be done much simpler, but this makes sense in my head right now. 
+Now I will move on to the bonus tasks. 
+
+

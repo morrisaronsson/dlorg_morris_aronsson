@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+mkdir -p ~/Downloads/text
+mkdir -p ~/Downloads/pdfs
+mkdir -p ~/Downloads/docs
+mkdir -p ~/Downloads/images
+mkdir -p ~/Downloads/zip
+mkdir -p ~/Downloads/excel
+mkdir -p ~/Downloads/other
+
 inotifywait -m -e moved_to -e create --format "$f" ~/Downloads | while read file
 do
 
@@ -9,11 +17,13 @@ for file in ~/Downloads/*.txt; do
     fi
 done
 
+
 for file in ~/Downloads/*.pdf; do
     if [[ -f "$file" ]]; then
         mv $file ~/Downloads/pdfs
     fi
 done 
+
 
 for file in ~/Downloads/*.docx; do
     if [[ -f "$file" ]]; then
@@ -28,17 +38,37 @@ for file in ~/Downloads/*.png; do
     fi  
 done
 
+
 for file in ~/Downloads/*.jpg; do
     if [[ -f "$file" ]]; then
         mv $file ~/Downloads/images
     fi  
 done
 
+
+for file in ~/Downloads/*.zip; do
+    if [[ -f "$file" ]]; then
+        mv $file ~/Downloads/zip
+    fi  
+done
+
+
+for file in ~/Downloads/*.xlsx; do
+    if [[ -f "$file" ]]; then
+        mv $file ~/Downloads/excel
+    fi  
+done
+
+
 for file in ~/Downloads/*; do
     if [[ -f "$file" ]]; then
         mv $file ~/Downloads/other
     fi  
-
 done
 
 done
+
+
+
+
+
