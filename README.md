@@ -45,4 +45,7 @@ Now I will move on to the bonus tasks.
 2d) BONUS This turned out to be alot simpler than I had feared. I had been thinking on it for a while, wondering if I should use something like if or else to have it create a directory if there is no place for it to go. 
 In the end I realized I already have the if built in, I can just add another line, so that every time a file is created of moved into Downloads the script first tries to create the correct directory, and doesnt do that with -p if there already is one. Then it moves the file there. Very simple, but I tried it and it works perfectly. 
 
-2e) BONUS
+2e) BONUS For this I rewatched lesson 9 on ssh, specifically part 2 - scp and sftp. 
+I opened another Gitbash window, this time staying in my windows compouter. Then I created a test file in my DBA directory. Then I wrote: scp TransferTest.docx linton@oracle_dba26:/home/linton/Downloads.
+I tested this and the file was copied into my linux. Now to try it with my script running. I created 3 diffrent files, a docx, a jpg and a pdf. I also deleted the entire images directory to test if it would recreate it, then move the file into it. 
+I started up my script then ran the code for the files and checked that all of them were transfered correctly. Task complete. 
