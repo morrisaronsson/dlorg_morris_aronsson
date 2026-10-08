@@ -1,0 +1,10 @@
+[Unit]
+Description="Organizes files created or moved into the Dowloads directory"
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/dlorg
+
+[Install]
+WantedBy=default.target
